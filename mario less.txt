@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<cs50.h>
+int main(void)
+
+{   
+    int x;
+    do
+    {
+        x = get_int("hight :"); 
+    }
+    while (x  < 1 || x > 8); //need to enter hight between 1 to 8
+    for (int i = 1; i <= x; i++)
+    {  
+        for (int z = x - i; z > 0; z--) //this condition to add spaces
+        {
+            printf(" ");
+        }
+        for (int j = 0; j < i ; j++)//the condition to add #
+        {  
+            printf("#");
+        }
+        printf("\n");
+    }
+}
